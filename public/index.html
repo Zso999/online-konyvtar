@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <title>Online Könyvtár</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <link rel="stylesheet" type="text/css" href="alap.css" />
+    <link rel="stylesheet" type="text/css" href="blog.css" />
+    <link rel="stylesheet" type="text/css" href="konyvfelvetel.css" />
+    <link rel="stylesheet" type="text/css" href="sajatkonyvtar.css" />
+    <link rel="stylesheet" type="text/css" href="signin.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="egykonyv.css" />
+    <link rel="stylesheet" type="text/css" href="regiszt.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--<link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
+    />-->
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fikon.png?v=1583323772103"
+      type="image/gif"
+    />
+    <!--script src="https://code.jquery.com/jquery-1.10.2.js"></script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="dataTable.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html">
+        <img
+          id="head1"
+          src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fkonyvtar%20(2).jpeg?v=1585416018050"
+          alt="O"
+        />
+        <img
+          id="head2"
+          src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fkonyvtar%20felirat.png?v=1585416649214"
+          alt="nline Könyvtár"
+        />
+      </a>
+    </div>
+
+    <div id="navbar" class="menu">
+      <a href="#/blog">Blog</a>
+      <!--a id="kolcson_gomb" href="#/kolcson">Könyvkölcsönzés</a-->
+      <div class="dropdown">
+        <a class="dropbtn">Könyvtár</a>
+        <div class="dropdown-content">
+          <a href="#/sajatkonyvtar">Saját könyvtáram</a>
+          <a id="kfelvev" href="#/konyvfelvetel">Könyvek felvétele</a>
+          <!--a href="#/kivansaglista">Kívánságlistám</a-->
+        </div>
+      </div>
+      <div class="dropdown2">
+        <a class="dropbtn2" id="profilgomb"></a>
+        <div id="profillista" class="dropdown2-content">
+          <a href="#/profilom">Profil</a>
+          <a id="kilepes">Kilépés</a>
+        </div>
+      </div>
+      <a id="belepes" href="#/signin">Belépés</a>
+      <a id="regisztracio" href="#/regiszt">Regisztráció</a>
+    </div>
+
+    
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+
+    <div id="oldal-alap"></div>
+    <script>
+      function oldalbetoltes() {
+        var oldal = document.location.hash;
+        var oldalterkep = {
+          "#/blog": "blog.html",
+          "": "alap.html",
+          "#/sajatkonyvtar": "sajatkonyvtar.html",
+          "#/kolcson": "kolcson.html",
+          "#/konyvfelvetel": "konyvfelvetel.html",
+          "#/kivansaglista": "kivansaglista.html",
+          "#/signin": "signin.html",
+          "#/egykonyv": "egykonyv.html",
+          "#/regiszt": "regiszt.html",
+          "#/profilom": "profil.html"
+        };
+        $("#oldal-alap").load(oldalterkep[oldal]);
+      }
+
+      oldalbetoltes();
+
+      window.addEventListener("popstate", oldalbetoltes);
+
+      /*
+      //ehhez a modszerhez vissza kell tenni a _gomb-os id-ket
+      $(function(){
+        $("#oldal-alap").load("alap.html");
+      });
+      
+      $('#sajatkonyvtar_gomb').click(() => {
+        $("#oldal-alap").load("sajatkonyvtar.html");
+      });
+      
+      $('#kolcson_gomb').click(() => {
+        $("#oldal-alap").load("kolcson.html");
+      });
+      
+      $('#konyvfelvetel_gomb').click(() => {
+        $("#oldal-alap").load("konyvfelvetel.html");
+      });
+      
+      $('#kivansaglista_gomb').click(() => {
+        $("#oldal-alap").load("kivansaglista.html");
+      });
+      
+      $('#belepes').click(() => {
+        $("#oldal-alap").load("signin.html");
+      });*/
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
