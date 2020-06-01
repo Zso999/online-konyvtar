@@ -1,0 +1,21 @@
+<div class="signin">
+  <p class="cim">
+    Ha még nincs fiókod, akkor egy gyors
+    <a id="regiszt_gomb" href="#/regiszt">Regisztráció</a>
+    után elkezdheted felvenni a könyveid.
+  </p>
+  <div>
+  <fieldset style="text-align: center;">
+    <legend style="text-align: left;">Bejelentkezés</legend>
+    <form method="post" action="/bejelentkezes" id="bejelentkezik">
+      Felhasználónév:<br />
+      <input type="text" name="felhasznalonev" />
+      <br />
+      Jelszó:<br />
+      <input type="password" name="jelszo" />
+    </form>
+  <button id="gomb" type="button" onclick="belepes();">Belépés</button>
+  </fieldset>
+  <script src="signin.js"></script>
+  </div>
+</div>

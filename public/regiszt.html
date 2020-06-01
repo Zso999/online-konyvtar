@@ -1,0 +1,27 @@
+<div id="regiszt">
+<fieldset>
+  <legend>Regisztráció</legend>
+  <form id="regisztral">
+    <table id="regtable">
+      <tr>
+        <td>Felhasználónév:</td>
+        <td><input type="text" name="felhasznalonev" /></td>
+      </tr>
+      <tr>
+        <td>Jelszó: <span>(minimum 8 karakter)</span></td>
+        <td><input type="password" name="jelszo" data-validation="length" data-validation-length="min8"/></td>
+      </tr>
+      <tr>
+        <td>Jelszó még egyszer:</td>
+        <td><input type="password" name="jelszoismet" data-validation="confirmation" data-validation-confirm="jelszo" /></td>
+      </tr>
+      <tr>
+        <td>Email cím:</td>
+        <td><input type="text" name="email" /></td>
+      </tr>
+    </table>
+    <button id="regisztgomb" type="submit">Regisztrálok</button>
+  </form>
+</fieldset>
+</div>
+<script src="regiszt.js"></script>

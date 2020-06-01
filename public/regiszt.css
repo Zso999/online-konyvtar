@@ -1,0 +1,48 @@
+#regiszt {
+  text-align: center;
+  margin-top: 5%;
+}
+#regiszt fieldset{
+  width: 30%;
+  border: 4px solid #642021;
+ /* text-align: center;*/
+  margin: auto;
+}
+#regiszt #regisztgomb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*#regiszt p, input {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+#regiszt p {
+  margin-bottom: 12px;
+  margin-right: 5px;
+}
+#regiszt input {
+  margin-top: 5px;
+  margin-bottom: 8px;
+}*/
+
+#regtable {
+ /* border: none;*/
+  padding: 0px;
+  width: 100%;
+}
+
+#regtable td{
+	padding: 5px 0px;
+}
+
+#regtable td:nth-child(1) {
+  text-align: right;
+  padding-right: 2px;
+  width: 50%;
+}
+
+#regtable td:nth-child(2) {
+  text-align: left;
+  padding-left: 2px;
+  width: 50%;
+}
