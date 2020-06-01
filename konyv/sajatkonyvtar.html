@@ -1,0 +1,32 @@
+<p id="loading" style=" text-align: center;">
+  Loading...
+</p>
+<div id="kepek" style="width: 100%; margin: auto; text-align: center; display: none;">
+  <em style="font-size: 30px; color: red;"><b>*A kép csupán illusztráció. A weboldal teljeskörű használatához regisztráció szükséges!</b></em>
+  <img style="width: 80%; height: auto;" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fkonyvtar_sajat.png?v=1588622123529"><br>
+</div>
+<div style="width: 80%; overflow:hidden; margin: 100px 10%; overflow-x:auto;">
+  <table style="width:100%; overflow-x:auto;" id="konyvtar" class="cell-border">
+    <caption>
+      Könyveid adatai
+    </caption>
+    <thead>
+    <tr>
+      <th>Szerző</th>
+      <th>Cím</th>
+      <th>Formátum</th>
+      <th class="moreless">Kiadás éve</th>
+      <th class="moreless">Hányadik kiadás</th>
+      <th class="moreless">Sorozat címe</th>
+      <th class="moreless">Száma a sorozatból</th>
+      <th id="tobbkevesebb">Mutass  </th>
+    </tr>
+    </thead>
+    <tbody id="konyveim"></tbody>
+  </table>
+
+  <script src="sajatkonyvtar.js"></script>
+  <script>
+    profilnev();
+  </script>
+</div>

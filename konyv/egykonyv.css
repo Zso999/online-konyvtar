@@ -1,0 +1,32 @@
+#kep {
+  float: left;
+  background-color: #FFFFFF;
+  height: 100%;
+  margin-top: 10px;
+}
+
+#adatok {
+  float: left;
+  width: 25%;
+  border: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#adatok td:nth-child(1){
+	font-weight: bold;
+  text-align: left;
+}
+
+#sorozatresz {
+	margin: 0px;
+	padding: inherit;
+}
+
+#keret{
+  margin: 0px 100px;
+}
+
+#visszagomb {
+  float: left;
+}

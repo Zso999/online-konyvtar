@@ -1,0 +1,26 @@
+<p id="loading" style="display: block; text-align: center;">
+  Loading...
+</p>
+<div style="width: 80%; margin: 10px auto;">
+  <table style="overflow-x:auto;" id="kivansag" class="cell-border">
+    <caption>
+      Könyveid adatai
+    </caption>
+    <thead>
+    <tr>
+      <th>Szerző</th>
+      <th>Cím</th>
+      <th>Formátum</th>
+      <th class="moreless">Kiadás éve</th>
+      <th class="moreless">Hányadik kiadás</th>
+      <th class="moreless">Sorozat címe</th>
+      <th class="moreless">Száma a sorozatból</th>
+      <th id="tobbetkevesebb">Mutass  </th>
+    </tr>
+    </thead>
+    <tbody id="klistam"></tbody>
+  </table>
+</div>
+<script>
+    $('#kivansag').DataTable();
+</script>
