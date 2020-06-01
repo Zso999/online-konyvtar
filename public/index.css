@@ -1,0 +1,203 @@
+body {
+  background-color: #ffc85f;
+  margin: 0px;
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #410000;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px #999;
+}
+
+button:hover {background-color: #961212;}
+
+button:active {
+  background-color: #961212;
+  box-shadow: 0 2px #575757;
+  transform: translateY(2px);
+}
+
+#head1 {
+  border-radius: 125px;
+  display: inline;
+  width: 6%;
+}
+
+#head2 {
+  text-decoration: none;
+  opacity: 0.8;
+  display: inline;
+  width: 50%;
+}
+
+.header {
+  background-color: rgb(65, 0, 0);
+  padding: 8px;
+  text-align: left;
+}
+
+/*új menü beállításai*/
+.menu{
+  width: 100%;
+  background-color: #410000;
+}
+
+#navbar {
+  overflow: hidden;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#navbar a {
+  background-color: #410000;
+  float: left;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar #belepes {
+  background-color: #410000;
+  float: right;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*#navbar #kilepes {
+  float: right;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}*/
+
+#navbar #regisztracio {
+  background-color: #410000;
+  float: right;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar #belepes:hover, /*#navbar #kilepes:hover,*/ #navbar #regisztracio:hover {
+  background-color: #1e0000;
+}
+
+#navbar .dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/*#navbar .dropdown .dropbtn {
+  background-color: #410000;
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
+}*/
+
+#navbar a:hover/*, #navbar .dropdown:hover .dropbtn*/ {
+  background-color: #1e0000;
+}
+
+#navbar .dropdown-content {
+  display: none;
+  min-width: 10%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 7;
+  position: absolute;
+  margin-top: 50px;
+}
+
+#navbar .dropdown-content a {
+  background-color: #d9c7c7;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-align: left;
+  display: block;
+}
+
+#navbar .dropdown-content a:hover {
+  background-color: #410000;
+  color: #ffffff;
+}
+
+#navbar .dropdown:hover .dropdown-content {
+  position: fixed;
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .teljes {
+  padding-top: 60px;
+}
+
+
+#navbar .dropbtn2 {
+  background-color: #410000;
+  float: right;
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar .dropbtn2:hover, .dropbtn2:focus {
+  background-color: #1e0000;
+}
+
+#navbar .dropdown2 {
+  overflow: hidden;
+  float: right;
+  display: none;
+}
+#navbar .dropdown2-content {
+  display: none;
+  min-width: 10%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 7;
+  position: absolute;
+  right: 0px;
+  margin-top: 50px;
+}
+
+#navbar .dropdown2-content a {
+  text-decoration: none;
+  background-color: #d9c7c7;
+  float: none;
+  color: black;
+  text-align: left;
+  display: block;
+}
+
+#navbar .dropdown2-content a:hover {
+  background-color: #410000;
+  color: #ffffff;
+}
