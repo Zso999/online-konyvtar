@@ -1,0 +1,87 @@
+<div id="konyv1">
+  <fieldset>
+    <legend>Könyv felvétele</legend>
+    <div id="baloldal">
+        <p>Szerző:</p>
+        <p>Cím:</p>
+        <p>Kiadás éve:</p>
+        <p>Hányadik kiadás?</p>
+        <p>Formátum</p>
+        <div id="sorInfo" style="display:none">
+          <p>Sorozat címe:</p>
+          <p>Száma a sorozatból:</p>
+        </div>
+        <p>Fedlap:</p>
+      <input type="checkbox" id="sorResz" onclick="sorKiir()" />
+      <label for="sorResz">A könyv egy sorozat része</label><br>
+    </div>
+    <form method="post" action="/egykonyvfeltoltes" id="felvetel" autocomplete="off">
+      <div id="jobboldal">
+        <div class="autocomplete">
+          <input id="szerzo" type="text" name="szerzo" /><br>
+          <input id="cim" type="text" name="cim" />
+        </div>
+        <input type="number" value="1999" name="kiadaseve" /><br>
+        <input type="number" name="kiadasszam" /><br>
+        <select id="tipus" name="tipus">
+          <option value="papir">Papír</option>
+          <option value="ebook">E-book</option>
+          <option value="pdf">Pdf</option>
+        </select>
+        <br>
+        <div id="sorInfosz" style="display:none">
+          <input type="text" name="sorozatcim" />
+          <br>
+          <input type="number" name="sorozatszam" />
+        </div>
+        <input type="file" id="files" name="files" onchange="getBaseUrl()" accept="image/*" single />
+      </div>
+      <br><button type="button" onclick="rogzites();">Felvesz</button>
+    </form>
+  </fieldset>
+</div>
+
+<div class="konyvtar">
+  <fieldset>
+    <legend>Könyvtár felvétele .csv fájl segítségével</legend>
+    <b>
+      A feltöltendő fájl <span class="kiemelt">kiterjesztés</span>e mindenképp <span class="kiemelt">.csv</span> legyen!!<br>
+      A könyv adatainak <span class="kiemelt">sorrend</span>je az alábbi kell legyen:<br>
+      <em class="kiemelt">Szerző, cím, kiadás éve, kiadás száma, formátum, sorozat címe, sorozat száma</em>
+    </b>
+    <form method="post" action="/csvfeltoltes" id="csvfeltolt">
+     <label for="csv">Fájl feltöltése:</label>
+       <input type="file" id="csv" name="file" single accept=".csv"/><br />
+       <button type="button" onclick="csvfeltoltes();">Felvesz</button>
+   </form>
+    <button id="segit" onclick="Help();">Segítségre van szükségem</button>
+   </fieldset>
+</div>
+
+<div id="help" style="display: none;">
+  <p>Dokumentáció</p>
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl.png?v=1587907017009">
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl1.png?v=1587907022687">
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl2.png?v=1587907027028">
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl3.png?v=1587907037249">
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl4.png?v=1588145946920">
+  <img class="dok" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Ffajl5.png?v=1588150418088">
+</div>
+
+
+<script src="konyvfelvetel.js"></script>
+  
+  <script>
+    /*function getBaseUrl ()  {
+    var file = document.querySelector('input[type=file]')['files'][0];
+    var reader = new FileReader();
+    var baseString;
+    reader.onloadend = function () {
+        baseString = reader.result;
+        console.log(baseString); 
+    };
+    reader.readAsDataURL(file);
+}*/
+    autocomplete(document.getElementById("szerzo"), szerzok);
+    autocomplete(document.getElementById("cim"), cimek);
+  </script>
