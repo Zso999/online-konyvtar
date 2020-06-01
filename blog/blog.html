@@ -1,0 +1,55 @@
+<div id="sidenav">
+  <button class="dropdown-btn">
+    Témák
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container" id="mindentema">
+    <button id="pluszgomb" class="pluszgomb" onclick="newTema()">
+      <img id="plusz" type="image/png" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fplusz.png?v=1584526750002"/>
+    </button>
+    <div class="ujelem" id="Tema" style="display: none; position: relative; width: 0; height: 0;">
+      <form method="post" action="/temavalasztas" id="temavalasztas">
+        <input id="ujTema" type="text" name="ujtema" placeholder="Új téma neve:"/>
+        <button type="button" onclick="temavalasz()" id="pipagomb">
+          <img id="pipa" type="image/png" src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fpipa.png.png?v=1584531656156"/>
+        </button>
+      </form>
+    </div>
+    <a>összes</a>
+  </div>
+  <!--a href="#">szia</a-->
+  <button class="dropdown-btn"  onclick="showAjanlas()">Ajánlás vagy vélemény írása</button>
+</div>
+
+<div id="ajanlasok" style="display: none;">
+  <span class="closebtn" onclick="closeAjanlas()" title="Close Overlay">×</span>
+  <div class="content">
+    <fieldset id="velemenyek">
+    <legend>Könyvajánló vagy vélemény írása:</legend>
+    <form class="ajanlo" method="post" action="/blogbejegyzesfel" id="bejegyez">
+      <input class="nullpoint" type="checkbox" id="ajanlo" value="konyvajanlo" name="hozzaszolas" />
+      <label for="ajanlo">Könyvajánló</label>
+      <input class="nullpoint" type="checkbox" id="velemeny" value="velemenyezes" name="hozzaszolas"/>
+      <label for="velemeny">Könyv véleményezése</label><br />
+      <label>Ajánlott / véleményezett könyv</label>
+      <input type="text" name="konyvszerzo" placeholder="szerzője:"/><input type="text" name="konyvcim" placeholder="címe:"/><br />
+      <label for="téma" id="tematika">Könyv tematikája:</label><br />
+      <select id="téma" name="tema"></select><br />
+      <textarea name="message" rows="4" cols="72" placeholder="Ide írd az üzenetedet:"></textarea><br />
+      <button type="button" onclick="rogzites()" id="elkuld">Elküld</button>
+    </form>
+    </fieldset>
+  </div>
+</div>
+  
+
+<div class="teljes" id="blogos">
+
+  <div id="bejegyzesek" style="margin-top: 7px;"></div>
+
+  <p id="loading" style="display: none;">
+    Loading...
+  </p>
+
+  <script src="blog.js"></script>
+</div>
