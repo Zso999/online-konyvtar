@@ -20,9 +20,9 @@ document.write(`
     <div class="dropdown">
       <a class="dropbtn">Könyvtár</a>
       <div class="dropdown-content">
-        <a href="sajatkonyvtar.html">Saját könyvtáram</a>
-        <a id="kfelvev" href="konyvfelvetel.html">Könyvek felvétele</a>
-        <!--a href="kivansaglista.html">Kívánságlistám</a-->
+        <a href="konyv/sajatkonyvtar.html">Saját könyvtáram</a>
+        <a id="kfelvev" href="felvesz/konyvfelvetel.html">Könyvek felvétele</a>
+        <a href="kivansaglista.html">Kívánságlistám</a>
       </div>
     </div>
     <div class="dropdown2">
@@ -32,7 +32,7 @@ document.write(`
         <a id="kilepes">Kilépés</a>
       </div>
     </div>
-    <a id="belepes" href="#/signin">Belépés</a>
+    <a id="belepes" href="signin.html">Belépés</a>
     <a id="regisztracio" href="regiszt.html">Regisztráció</a>
   </div>
   `);
