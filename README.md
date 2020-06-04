@@ -1,3 +1,3 @@
 # online-konyvtar
 
-see our app in other things
+Ez egy olyan app lesz ami sok mindenre jó lesz az olvasni vágyóknak
