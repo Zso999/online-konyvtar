@@ -16,20 +16,20 @@ document.write(`
   </div>
 
   <div id="navbar" class="menu">
-    <a href="blog/blog.html">Blog</a>
-    <!--a id="kolcson_gomb" href="#/kolcson">Könyvkölcsönzés</a-->
+    <a href="../blog/blog.html">Blog</a>
+    <!--a id="kolcson_gomb" href="../kolcson/kolcson.html">Könyvkölcsönzés</a-->
     <div class="dropdown">
       <a class="dropbtn">Könyvtár</a>
       <div class="dropdown-content">
-        <a href="konyv/sajatkonyvtar.html">Saját könyvtáram</a>
+        <a href="../konyv/sajatkonyvtar.html">Saját könyvtáram</a>
         <a id="kfelvev" href="felvesz/konyvfelvetel.html">Könyvek felvétele</a>
-        <a href="konyv/kivansaglista.html">Kívánságlistám</a>
+        <a href="../konyv/kivansaglista.html">Kívánságlistám</a>
       </div>
     </div>
     <div class="dropdown2">
       <a class="dropbtn2" id="profilgomb"></a>
       <div id="profillista" class="dropdown2-content">
-        <a href="profilom.html">Profil</a>
+        <a href="../profilom.html">Profil</a>
         <a id="kilepes">Kilépés</a>
       </div>
     </div>
