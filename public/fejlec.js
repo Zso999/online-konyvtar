@@ -1,7 +1,7 @@
 document.write(`
   <!--link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"-->
   <div class="header">
-    <a href="index.html">
+    <a href="../index.html">
       <img
         id="head1"
         src="https://cdn.glitch.com/92265b33-682a-4100-b469-e11a9dd840f9%2Fkonyvtar%20(2).jpeg?v=1585416018050"
