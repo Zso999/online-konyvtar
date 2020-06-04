@@ -22,7 +22,7 @@ document.write(`
       <a class="dropbtn">Könyvtár</a>
       <div class="dropdown-content">
         <a href="../konyv/sajatkonyvtar.html">Saját könyvtáram</a>
-        <a id="kfelvev" href="felvesz/konyvfelvetel.html">Könyvek felvétele</a>
+        <a id="kfelvev" href="../felvesz/konyvfelvetel.html">Könyvek felvétele</a>
         <a href="../konyv/kivansaglista.html">Kívánságlistám</a>
       </div>
     </div>
