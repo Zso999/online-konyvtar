@@ -4,18 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <head>
     <title>Online Könyvtár</title>
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <!link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
+
     <link rel="stylesheet" type="text/css" href="alap.css" />
-    <link rel="stylesheet" type="text/css" href="../blog/blog.css" />
-    <link rel="stylesheet" type="text/css" href="../felvesz/konyvfelvetel.css" />
-    <link rel="stylesheet" type="text/css" href="../konyvtar/sajatkonyvtar.css" />
+    <link rel="stylesheet" type="text/css" href="online-konyvtar/blog/blog.css" />
+    <link rel="stylesheet" type="text/css" href="online-konyvtar/felvesz/konyvfelvetel.css" />
+    <link rel="stylesheet" type="text/css" href="online-konyvtar/konyvtar/sajatkonyvtar.css" />
     <link rel="stylesheet" type="text/css" href="signin.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="stylesheet" type="text/css" href="../konyv/egykonyv.css" />
+    <link rel="stylesheet" type="text/css" href="online-konyvtar/konyv/egykonyv.css" />
     <link rel="stylesheet" type="text/css" href="regiszt.css" />
     <link
       rel="stylesheet"
@@ -70,7 +70,7 @@
       <a id="regisztracio" href="#/regiszt">Regisztráció</a>
     </div>
 
-    
+
 
     <script>
       window.onscroll = function() {
@@ -117,23 +117,23 @@
       $(function(){
         $("#oldal-alap").load("alap.html");
       });
-      
+
       $('#sajatkonyvtar_gomb').click(() => {
         $("#oldal-alap").load("sajatkonyvtar.html");
       });
-      
+
       $('#kolcson_gomb').click(() => {
         $("#oldal-alap").load("kolcson.html");
       });
-      
+
       $('#konyvfelvetel_gomb').click(() => {
         $("#oldal-alap").load("konyvfelvetel.html");
       });
-      
+
       $('#kivansaglista_gomb').click(() => {
         $("#oldal-alap").load("kivansaglista.html");
       });
-      
+
       $('#belepes').click(() => {
         $("#oldal-alap").load("signin.html");
       });*/
