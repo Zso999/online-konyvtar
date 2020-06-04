@@ -13,13 +13,14 @@ HTMLElement.prototype.serialize = function() {
   return JSON.stringify(obj);
 };
 
+console.log(window.location);
 function belepes() {
   superagent
     .post("/bejelentkezes")
     .set('content-type', 'application/json')
     .send(document.getElementById("bejelentkezik").serialize())
     .then(res => {
-        window.location.hash = "/sajatkonyvtar";
+        window.location = "konyv/sajatkonyvtar.html";
         profilnev();
         location.reload();
     });
