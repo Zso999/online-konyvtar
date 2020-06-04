@@ -1,47 +1,65 @@
-<div class="teljes">
-  <a id="visszagomb" href="#/sajatkonyvtar">
-    Vissza a könyvtárhoz
-  </a>
-  <p id="loading" style="display: none">Loading...</p>
-  <div id="keret">
-    <div id="kep">
-      <img id="boritokep">
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Könyvtár</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" href="../assets/ikon.png" type="image/png" sizes="32x32"/>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="egykonyv.css">
+  <script src="../fejlec.js"></script>
+  <script src="dataTable.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"></script>
+</head>
+<body>
+  <div class="teljes">
+    <a id="visszagomb" href="#/sajatkonyvtar">
+      Vissza a könyvtárhoz
+    </a>
+    <p id="loading" style="display: none">Loading...</p>
+    <div id="keret">
+      <div id="kep">
+        <img id="boritokep">
+      </div>
 
-    <table id="adatok">
-      <tr>
-        <td>Szerző:</td>
-        <td id="konyvszerzo"></td>
-      </tr>
-      <tr>
-        <td>Cím:</td>
-        <td id="konyvcim"></td>
-      </tr>
-      <tr>
-        <td>Formátum:</td>
-        <td id="konyvformatum"></td>
-      </tr>
-      <tr>
-        <td>Kiadás éve:</td>
-        <td id="konyvkiadaseve"></td>
-      </tr>
-      <tr>
-        <td>Kiadás száma:</td>
-        <td id="konyvkiadasszama"></td>
-      </tr>
-      <tr class="egysoradat">
-        <td>Sorozat címe:</td>
-        <td id="konyvsorozatcime"></td>
-      </tr>
-      <tr class="egysoradat">
-        <td>Száma a sorozatban:</td>
-        <td id="konyvsorozatszam"></td>
-      </tr>
-      <tr>
-        <td id="szerkesztgomb"></td>
-        <td id="torlesgomb"></td>
-      </tr>
-    </table>
+      <table id="adatok">
+        <tr>
+          <td>Szerző:</td>
+          <td id="konyvszerzo"></td>
+        </tr>
+        <tr>
+          <td>Cím:</td>
+          <td id="konyvcim"></td>
+        </tr>
+        <tr>
+          <td>Formátum:</td>
+          <td id="konyvformatum"></td>
+        </tr>
+        <tr>
+          <td>Kiadás éve:</td>
+          <td id="konyvkiadaseve"></td>
+        </tr>
+        <tr>
+          <td>Kiadás száma:</td>
+          <td id="konyvkiadasszama"></td>
+        </tr>
+        <tr class="egysoradat">
+          <td>Sorozat címe:</td>
+          <td id="konyvsorozatcime"></td>
+        </tr>
+        <tr class="egysoradat">
+          <td>Száma a sorozatban:</td>
+          <td id="konyvsorozatszam"></td>
+        </tr>
+        <tr>
+          <td id="szerkesztgomb"></td>
+          <td id="torlesgomb"></td>
+        </tr>
+      </table>
+    </div>
   </div>
-</div>
-<script src="egykonyv.js"></script>
+  <script src="egykonyv.js"></script>
+</body>
+</html>
