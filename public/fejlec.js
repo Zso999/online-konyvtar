@@ -15,12 +15,12 @@ document.write(`
   </div>
 
   <div id="navbar" class="menu">
-    <a href="blog.html">Blog</a>
+    <a href="/blog/blog.html">Blog</a>
     <!--a id="kolcson_gomb" href="#/kolcson">Könyvkölcsönzés</a-->
     <div class="dropdown">
       <a class="dropbtn">Könyvtár</a>
       <div class="dropdown-content">
-        <a href="sajatkonyvtar.html">Saját könyvtáram</a>
+        <a href="/konyv/sajatkonyvtar.html">Saját könyvtáram</a>
         <a id="kfelvev" href="konyvfelvetel.html">Könyvek felvétele</a>
         <!--a href="kivansaglista.html">Kívánságlistám</a-->
       </div>
