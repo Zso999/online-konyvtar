@@ -1,21 +1,42 @@
-<div class="signin">
-  <p class="cim">
-    Ha még nincs fiókod, akkor egy gyors
-    <a id="regiszt_gomb" href="#/regiszt">Regisztráció</a>
-    után elkezdheted felvenni a könyveid.
-  </p>
-  <div>
-  <fieldset style="text-align: center;">
-    <legend style="text-align: left;">Bejelentkezés</legend>
-    <form method="post" action="/bejelentkezes" id="bejelentkezik">
-      Felhasználónév:<br />
-      <input type="text" name="felhasznalonev" />
-      <br />
-      Jelszó:<br />
-      <input type="password" name="jelszo" />
-    </form>
-  <button id="gomb" type="button" onclick="belepes();">Belépés</button>
-  </fieldset>
-  <script src="signin.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Online Könyvtár</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" href="assets/ikon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="signin.css" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="fejlec.js"></script>
+</head>
+
+<body>
+  <div class="signin">
+    <p class="cim">
+      Ha még nincs fiókod, akkor egy gyors
+      <a id="regiszt_gomb" href="regiszt.html">Regisztráció</a>
+      után elkezdheted felvenni a könyveid.
+    </p>
+    <div>
+      <fieldset style="text-align: center;">
+        <legend style="text-align: left;">Bejelentkezés</legend>
+        <form method="post" action="/bejelentkezes" id="bejelentkezik">
+          Felhasználónév:<br />
+          <input type="text" name="felhasznalonev" />
+          <br />
+          Jelszó:<br />
+          <input type="password" name="jelszo" />
+        </form>
+        <button id="gomb" type="button" onclick="belepes();">Belépés</button>
+      </fieldset>
+      <script src="signin.js"></script>
+    </div>
   </div>
-</div>
+</body>
+
+</html>
