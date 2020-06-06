@@ -1,4 +1,3 @@
-# Online Könyvtár
 
 ---
 layout:     post
