@@ -23,8 +23,8 @@ function regisztracio() {
     });
 }
 document.getElementById("regisztgomb").onclick = regisztracio;
-$.validate({
-  form : '#regisztral',
-  modules : 'toggleDisabled, security',
+//$.validate({
+//  form : '#regisztral',
+//  modules : 'toggleDisabled, security',
   //validateOnBlur : false,
-});
+//});
