@@ -11,7 +11,7 @@
 
 #ajanlasok .content {
   background-color: rgba(255,255,255, 0.7);
-  width: 42%;
+  width: 50%;
   min-height: 250px;
   height: auto;
   margin: 0;
@@ -75,9 +75,8 @@
 }
 
 @media screen and (max-width: 800px) {
-  .b {
-    width: 80%;
-    height: 160px;
+  #ajanlasok .content {
+    width: 55%;
   }
 }
 
