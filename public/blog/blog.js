@@ -286,7 +286,7 @@ function kiirHozzaszolas(hozzaszolasok, bejegyzes){
   em.setAttribute("class", "hfejlec");
 
   var dszov = document.createElement("DIV");
-  var dsz = document.createTextNode(hozzaszolasok.uzenet + <hr>);
+  var dsz = document.createTextNode(hozzaszolasok.uzenet);
   dszov.appendChild(dsz);
   dki.appendChild(dszov);
 
