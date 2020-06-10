@@ -28,3 +28,10 @@ document.getElementById("regisztgomb").onclick = regisztracio;
 //  modules : 'toggleDisabled, security',
   //validateOnBlur : false,
 //});
+$.validate({
+  form : '#regisztral',
+  modules : 'toggleDisabled, security',
+  language : myLanguage,
+  errorMessagePosition : 'top',
+  //validateOnBlur : false,
+});

@@ -115,15 +115,6 @@ var myLanguage = {
         imageRatioNotAccepted : 'Image ratio is not accepted'
     };
 
-
-$.validate({
-  form : '#regisztral',
-  modules : 'toggleDisabled, security',
-  language : myLanguage,
-  errorMessagePosition : 'top',
-  //validateOnBlur : false,
-});
-
 /*function getCookie(name) {
   var value = "; " + document.cookie;
   var parts = value.split("; " + name + "=");
