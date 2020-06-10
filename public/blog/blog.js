@@ -59,7 +59,7 @@ function hozzaszolt(formid) {
     .set("content-type", "application/json")
     .send(JSON.stringify({id: konyvid}))
     .then(res => {
-      
+
     });*/
 }
 
@@ -153,75 +153,75 @@ function kiirBejegyzes(bejegyzes) {
   //console.log("valami");
   //console.log(annyiadik);
   var bej = document.getElementById("bejegyzesek");
-  
+
   const milliseconds = bejegyzes.idopont;
   const dateObject = new Date(milliseconds);
   const ido = dateObject.toLocaleDateString();
   var felhasznalo = bejegyzes.felhasznalo;
   if (felhasznalo === null) felhasznalo = "ismeretlen";
-  
+
   var dki = document.createElement("DIV");
   var d = document.createTextNode("");
   dki.appendChild(d);
   bej.appendChild(dki);
-  
+
   dki.setAttribute("class", "bejegyz");
   dki.setAttribute("id", bejegyzes._id);
-  
+
   var em = document.createElement("EM");
   var e = document.createTextNode(ido+"-án "+felhasznalo+" írta:");
   em.appendChild(e);
   dki.appendChild(em);
-  
+
   em.setAttribute("class", "fejlec");
-  
+
   var dszov = document.createElement("DIV");
   var dsz = document.createTextNode(bejegyzes.message);
   dszov.appendChild(dsz);
   dki.appendChild(dszov);
 
   dszov.setAttribute("class", "szoveg");
-  
+
   var form = document.createElement("FORM");
   var texti = document.createTextNode("");
   form.appendChild(texti);
   dki.appendChild(form);
-  
+
   form.setAttribute("class", "hozzaszolok");
   form.setAttribute("method", "post");
   form.setAttribute("action", "/hozzaszol");
   form.setAttribute("id", "formid_"+bejegyzes._id);
-  
+
   var hozzaszolas = document.createElement("INPUT");
   var texting = document.createTextNode("");
   hozzaszolas.appendChild(texting);
   form.appendChild(hozzaszolas);
-  
+
   hozzaszolas.setAttribute("type", "text");
   hozzaszolas.setAttribute("class", "hozzaszolni");
   hozzaszolas.setAttribute("name", "uzenet");
-  
+
   var id = document.createElement("INPUT");
   form.appendChild(id);
-  
+
   id.setAttribute("type", "hidden");
   id.setAttribute("value", bejegyzes._id);
   id.setAttribute("name", "bejegyzesid");
-  
+
   var hozza = document.createElement("BUTTON");
   var textin = document.createTextNode("Rögzít");
   hozza.appendChild(textin);
   form.appendChild(hozza);
-  
+
   hozza.setAttribute("class", "hozzaszoltam");
   hozza.setAttribute("type", "button");
   hozza.setAttribute("onclick", "hozzaszolt('formid_"+bejegyzes._id+"')");
-  
+
   var dhozza = document.createElement("A");
   var dh = document.createTextNode("Hozzászólások");
   dhozza.appendChild(dh);
   dki.appendChild(dhozza);
-  
+
   dhozza.setAttribute("class", "hozzagomb");
 }
 
@@ -262,16 +262,35 @@ function kiirTema(tema) {
 }
 
 function kiirHozzaszolas(hozzaszolasok, bejegyzes){
-  console.log(bejegyzes);
+  //console.log(bejegyzes);
   var dki = document.getElementById(bejegyzes);
-  
+
+  const milliseconds = hozzaszolasok.idopont;
+  const dateObject = new Date(milliseconds);
+  const ido = dateObject.toLocaleDateString();
+  var felhasznalo = hozzaszolasok.felhasznalo;
+  if (felhasznalo === null) felhasznalo = "ismeretlen";
+
   var dsok = document.createElement("DIV");
-  var ds = document.createTextNode(hozzaszolasok.uzenet);
+  var ds = document.createTextNode("");
   dsok.appendChild(ds);
   dki.appendChild(dsok);
-  
-  dsok.setAttribute("class", "hhshi");
-  
+
+  dsok.setAttribute("class", "szolasdiv");
+
+  var em = document.createElement("EM");
+  var e = document.createTextNode(ido+"-án "+felhasznalo+" írta:");
+  em.appendChild(e);
+  dki.appendChild(em);
+
+  em.setAttribute("class", "hfejlec");
+
+  var dszov = document.createElement("DIV");
+  var dsz = document.createTextNode(hozzaszolasok.uzenet + "<hr>");
+  dszov.appendChild(dsz);
+  dki.appendChild(dszov);
+
+  dszov.setAttribute("class", "hszoveg");
 }
 
 /*
