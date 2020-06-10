@@ -64,6 +64,7 @@ app.post('/hozzaszolfel', secretMiddleware, function(request, response) {
     var dbo = db.db("mydb");
     var hozzaszolas = request.body;
     hozzaszolas.felhasznalo = request.user.felhasznalo;
+    hozzaszolas.ido = Date.now();
     //hozzaszolas.id = request.cookies['bejegyzesid'];
     dbo.collection("hozzaszolas").insert(hozzaszolas, function(err, result) {
       if (err) throw err;
@@ -261,7 +262,7 @@ app.post('/regisztracio', function(request, response) {
     var hash = crypto.scryptSync(request.body.jelszo, salt, 64);
     hash = hash.toString("hex");
     var user = {
-      nev : request.body.felhasznalonev, 
+      nev : request.body.felhasznalonev,
       jelszo : hash,
       salt : salt,
       email: request.body.email
