@@ -12,14 +12,14 @@
 #ajanlasok .content {
   background-color: rgba(255,255,255, 0.7);
   width: 42%;
-  min-height: 280px;
+  min-height: 250px;
   height: auto;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin-left: auto;
   margin-right: auto;
   padding: 8px;
