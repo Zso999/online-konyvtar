@@ -286,11 +286,13 @@ function kiirHozzaszolas(hozzaszolasok, bejegyzes){
   em.setAttribute("class", "hfejlec");
 
   var dszov = document.createElement("DIV");
-  var dsz = document.createTextNode(hozzaszolasok.uzenet + <hr>);
+  var dsz = document.createTextNode(hozzaszolasok.uzenet);
   dszov.appendChild(dsz);
   dki.appendChild(dszov);
-
   dszov.setAttribute("class", "hszoveg");
+
+  var hr = document.createElement("HR");
+  dki.appendChild(hr);
 }
 
 /*
