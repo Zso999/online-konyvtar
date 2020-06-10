@@ -1,0 +1,24 @@
+#profilvalt {
+  text-align: center;
+  margin-top: 5%;
+}
+#profilvalt fieldset{
+  width: 30%;
+  border: 4px solid #642021;
+  margin: auto;
+}
+#profilvalt #jelszovaltgomb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#profiltable {
+  padding: 0px;
+  width: 100%;
+}
+
+#profiltable td{
+	padding: 5px 0px;
+  text-align: left;
+  padding-left: 2px;
+  width: 50%;
+}

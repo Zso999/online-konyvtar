@@ -26,6 +26,12 @@ button:active {
   transform: translateY(2px);
 }
 
+button:disabled {
+	background-color: #2b1717;
+	color: #b3b3b3;
+	cursor: default;
+}
+
 #head1 {
   border-radius: 125px;
   display: inline;
@@ -107,7 +113,7 @@ button:active {
 
 /*#navbar .dropdown .dropbtn {
   background-color: #410000;
-  font-size: 17px;  
+  font-size: 17px;
   border: none;
   outline: none;
   color: white;

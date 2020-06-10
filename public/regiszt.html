@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html>
 
 <head>
@@ -12,10 +12,10 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-  <script src="fejlec.js"></script>
 </head>
 
-<body>
+<body-->
+  <!--script src="fejlec.js"></script-->
   <div id="regiszt">
     <fieldset>
       <legend>Regisztráció</legend>
@@ -23,19 +23,28 @@
         <table id="regtable">
           <tr>
             <td>Felhasználónév:</td>
-            <td><input type="text" name="felhasznalonev" /></td>
+            <td><input type="text" name="felhasznalonev"
+              data-validation="required"/></td>
           </tr>
           <tr>
             <td>Jelszó: <span>(minimum 8 karakter)</span></td>
-            <td><input type="password" name="jelszo" data-validation="length" data-validation-length="min8" /></td>
+            <td><input type="password" name="jelszo"
+              data-validation="required length"
+              data-validation-length="min8"
+              data-validation-error-msg-length="A jelszó nem elég hosszú!" /></td>
           </tr>
           <tr>
             <td>Jelszó még egyszer:</td>
-            <td><input type="password" name="jelszoismet" data-validation="confirmation" data-validation-confirm="jelszo" /></td>
+            <td><input type="password" name="jelszoismet"
+              data-validation="required confirmation"
+              data-validation-confirm="jelszo"
+              data-validation-error-msg-confirmation="A jelszó nem egyezik!"/></td>
+
           </tr>
           <tr>
             <td>Email cím:</td>
-            <td><input type="text" name="email" /></td>
+            <td><input type="text" name="email"
+              data-validation="required email"/></td>
           </tr>
         </table>
         <button id="regisztgomb" type="submit">Regisztrálok</button>
@@ -43,6 +52,6 @@
     </fieldset>
   </div>
   <script src="regiszt.js"></script>
-</body>
+<!--/body>
 
-</html>
+</html-->

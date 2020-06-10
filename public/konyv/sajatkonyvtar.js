@@ -17,7 +17,7 @@ function pluszSor(konyv) {
   cell5.innerHTML = konyv.kiadasszam;
   cell6.innerHTML = konyv.sorozatcim;
   cell7.innerHTML = konyv.sorozatszam;
-  
+
   cell4.setAttribute("class", "moreless");
   cell5.setAttribute("class", "moreless");
   cell6.setAttribute("class", "moreless");
@@ -26,7 +26,7 @@ function pluszSor(konyv) {
   cell5.setAttribute("style", "display: none;");
   cell6.setAttribute("style", "display: none;");
   cell7.setAttribute("style", "display: none;");
-  
+
   var cell8 = row.insertCell(7);
   cell8.innerHTML = `<a href="#/egykonyv"><button style="width: 90px;" onclick="tobb('${konyv._id}')">Több</button></a>`;
   cell8.setAttribute("style", "text-align: center;")
@@ -92,7 +92,7 @@ var y = document.getElementsByClassName("moreless");
 
 function TpluszK(){
   var x = document.getElementById("more");
-  
+
   if (x.innerHTML === "Többet") {
     x.innerHTML = "Kevesebbet";
     for (i = 0; i < y.length; i++) {

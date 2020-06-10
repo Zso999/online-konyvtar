@@ -1,5 +1,6 @@
 document.write(`
   <!--link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"-->
+  <script src="index.js"></script>
   <div class="header">
     <a href="../index.html">
       <img

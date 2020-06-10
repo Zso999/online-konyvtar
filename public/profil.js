@@ -25,5 +25,7 @@ function jelszovaltoztatas(){
 document.getElementById("jelszovaltgomb").onclick = jelszovaltoztatas;
 $.validate({
   form : '#jelszovaltoztatas',
-  modules : 'toggleDisabled, security'
+  modules : 'toggleDisabled, security',
+  language : myLanguage,
+  errorMessagePosition : 'top',
 });
