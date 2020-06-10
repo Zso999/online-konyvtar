@@ -64,11 +64,12 @@
   position: relative;
   top: 100%;
   width: 70%;
-  height: 10px;
+  height: 30px;
+  text-align: center;
 }
 
 .hr {
-  background-color: #362b0d;
+  color: #362b0d;
 }
 
 @media screen and (max-width: 800px) {
