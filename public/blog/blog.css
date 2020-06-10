@@ -18,12 +18,14 @@
   left: 33%;*/
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   text-align: center;
   padding: 8px;
 }
 
 #ajanlasok .content #velemenyek {
-  width: inherit;
+  width: 42%;
   align: center;
   color: rgb(65, 0, 0);
   border: 3px solid;

@@ -176,7 +176,7 @@ function kiirBejegyzes(bejegyzes) {
   em.setAttribute("class", "fejlec");
 
   var dszov = document.createElement("DIV");
-  var dsz = document.createTextNode(bejegyzes.message + "\n");
+  var dsz = document.createTextNode(bejegyzes.message);
   dszov.appendChild(dsz);
   dki.appendChild(dszov);
 
@@ -218,7 +218,7 @@ function kiirBejegyzes(bejegyzes) {
   hozza.setAttribute("onclick", "hozzaszolt('formid_"+bejegyzes._id+"')");
 
   var dhozza = document.createElement("A");
-  var dh = document.createTextNode("\n Hozzászólások");
+  var dh = document.createTextNode("Hozzászólások");
   dhozza.appendChild(dh);
   dki.appendChild(dhozza);
 
