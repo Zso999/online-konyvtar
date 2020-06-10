@@ -181,7 +181,11 @@ function kiirBejegyzes(bejegyzes) {
   dki.appendChild(dszov);
 
   dszov.setAttribute("class", "szoveg");
+  formapp();
+}
 
+
+function formapp(bejegyzes) {
   var form = document.createElement("FORM");
   var texti = document.createTextNode("");
   form.appendChild(texti);
