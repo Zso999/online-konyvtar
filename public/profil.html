@@ -15,17 +15,35 @@
 <!--/head>
 
 <body-->
-  <h3>Profilom</h3>
-  <b>Jelszó változtatás</b>
-  <form id="jelszovaltoztatas">
-    <label for="regijelszo">Régi jelszó</label>
-    <input id="regijelszo" type="text" name="regijelszo"><br>
-    <label for="ujjelszo">Új jelszó</label>
-    <input id="ujjelszo" type="text" name="ujjelszo"><br>
-    <label for="ujjelszoism">Új jelszó ismét</label>
-    <input id="ujjelszoism" type="text" name="ujjelszoism"><br>
-    <button type="button" id="jelszovaltgomb">Megváltoztat</button>
-  </form>
+  <div id="profilvalt">
+    <h1>Profilom</h1>
+    <fieldset>
+      <legend style="text-align: left; margin-left: 15px;">Jelszó változtatás</legend>
+      <form id="jelszovaltoztatas">
+        <table id="profiltable">
+          <tr>
+            <td>Régi jelszó</td>
+            <td><input id="regijelszo" type="text" name="regijelszo" data-validation="required"></td>
+          </tr>
+          <tr>
+            <td>Új jelszó</td>
+            <td><input id="ujjelszo" type="text" name="ujjelszo"
+              data-validation="required length"
+              data-validation-length="min8"
+              data-validation-error-msg-length="A jelszó nem elég hosszú!"></td>
+          </tr>
+          <tr>
+            <td>Új jelszó ismét</td>
+            <td><input id="ujjelszoism" type="text" name="ujjelszoism"
+              data-validation="required confirmation"
+              data-validation-confirm="jelszo"
+              data-validation-error-msg-confirmation="A jelszó nem egyezik!"></td>
+          </tr>
+        </table>
+        <button type="button" id="jelszovaltgomb">Megváltoztat</button>
+      </form>
+    </fieldset>
+  </div>
   <script src="profil.js"></script>
 <!--/body>
 

@@ -75,7 +75,7 @@ window.onclick = function(event) {
 
 var myLanguage = {
         errorTitle: 'Sikertelen küldés!',
-        requiredFields: 'Nincs mindegyik mező kitöltve!',
+        requiredFields: 'Ez egy kötelező mező',
         badTime: 'You have not given a correct time',
         badEmail: 'Érvénytelen email-cím',
         badTelephone: 'You have not given a correct phone number',
