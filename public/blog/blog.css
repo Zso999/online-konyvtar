@@ -12,16 +12,18 @@
 #ajanlasok .content {
   background-color: rgba(255,255,255, 0.7);
   width: 42%;
-  height: 230px;
-  position: absolute;
+  height: 280px;
+  /*position: absolute;
   top: 35%;
-  left: 33%;
-  align: center;
+  left: 33%;*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   padding: 8px;
 }
 
 #ajanlasok .content #velemenyek {
-  width: auto;
+  width: inherit;
   align: center;
   color: rgb(65, 0, 0);
   border: 3px solid;
@@ -61,8 +63,6 @@
 }
 
 .hozzaszolni {
-  position: relative;
-  top: 100%;
   width: 70%;
   height: 30px;
   text-align: center;

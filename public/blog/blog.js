@@ -218,7 +218,7 @@ function kiirBejegyzes(bejegyzes) {
   hozza.setAttribute("onclick", "hozzaszolt('formid_"+bejegyzes._id+"')");
 
   var dhozza = document.createElement("A");
-  var dh = document.createTextNode("\n" + "Hozzászólások");
+  var dh = document.createTextNode("\n Hozzászólások");
   dhozza.appendChild(dh);
   dki.appendChild(dhozza);
 
