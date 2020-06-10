@@ -13,19 +13,17 @@
   background-color: rgba(255,255,255, 0.7);
   width: 42%;
   height: 280px;
-  /*position: absolute;
-  top: 35%;
-  left: 33%;*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
   padding: 8px;
 }
 
 #ajanlasok .content #velemenyek {
-  width: 42%;
   align: center;
   color: rgb(65, 0, 0);
   border: 3px solid;
