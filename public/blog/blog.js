@@ -265,7 +265,7 @@ function kiirHozzaszolas(hozzaszolasok, bejegyzes){
   //console.log(bejegyzes);
   var dki = document.getElementById(bejegyzes);
 
-  const milliseconds = hozzaszolasok.idopont;
+  const milliseconds = hozzaszolasok.ido;
   const dateObject = new Date(milliseconds);
   const ido = dateObject.toLocaleDateString();
   var felhasznalo = hozzaszolasok.felhasznalo;
