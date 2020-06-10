@@ -176,16 +176,12 @@ function kiirBejegyzes(bejegyzes) {
   em.setAttribute("class", "fejlec");
 
   var dszov = document.createElement("DIV");
-  var dsz = document.createTextNode(bejegyzes.message);
+  var dsz = document.createTextNode(bejegyzes.message + "\n");
   dszov.appendChild(dsz);
   dki.appendChild(dszov);
 
   dszov.setAttribute("class", "szoveg");
-  formapp();
-}
 
-
-function formapp(bejegyzes) {
   var form = document.createElement("FORM");
   var texti = document.createTextNode("");
   form.appendChild(texti);
@@ -222,7 +218,7 @@ function formapp(bejegyzes) {
   hozza.setAttribute("onclick", "hozzaszolt('formid_"+bejegyzes._id+"')");
 
   var dhozza = document.createElement("A");
-  var dh = document.createTextNode("Hozzászólások");
+  var dh = document.createTextNode("\n" + "Hozzászólások");
   dhozza.appendChild(dh);
   dki.appendChild(dhozza);
 
