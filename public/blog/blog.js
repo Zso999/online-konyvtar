@@ -271,13 +271,6 @@ function kiirHozzaszolas(hozzaszolasok, bejegyzes){
   var felhasznalo = hozzaszolasok.felhasznalo;
   if (felhasznalo === null) felhasznalo = "ismeretlen";
 
-  var dsok = document.createElement("DIV");
-  var ds = document.createTextNode("");
-  dsok.appendChild(ds);
-  dki.appendChild(dsok);
-
-  dsok.setAttribute("class", "szolasdiv");
-
   var em = document.createElement("EM");
   var e = document.createTextNode(ido+"-án "+felhasznalo+" írta:");
   em.appendChild(e);
@@ -293,6 +286,7 @@ function kiirHozzaszolas(hozzaszolasok, bejegyzes){
 
   var hr = document.createElement("HR");
   dki.appendChild(hr);
+  hr.setAttribute("class", "hr");
 }
 
 /*
