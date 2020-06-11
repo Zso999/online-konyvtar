@@ -218,11 +218,15 @@ function kiirBejegyzes(bejegyzes) {
   hozza.setAttribute("onclick", "hozzaszolt('formid_"+bejegyzes._id+"')");
 
   var dhozza = document.createElement("A");
-  var dh = document.createTextNode("Hozzászólások");
+  var dh = document.createTextNode("Hozzászólások" + "\n");
   dhozza.appendChild(dh);
   dki.appendChild(dhozza);
 
   dhozza.setAttribute("class", "hozzagomb");
+
+  var hr = document.createElement("HR");
+  dki.appendChild(hr);
+  hr.setAttribute("class", "hr");
 }
 
 function temabeallit(tema){
