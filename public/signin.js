@@ -20,9 +20,8 @@ function belepes() {
     .set('content-type', 'application/json')
     .send(document.getElementById("bejelentkezik").serialize())
     .then(res => {
-       window.location = "konyv/sajatkonyvtar.html";
+       window.location = "#/sajatkonyvtar.html";
         profilnev();
-    console.log("Relokáció");
       //  location.reload();
     });
 }
