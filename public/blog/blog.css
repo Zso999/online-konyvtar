@@ -11,17 +11,21 @@
 
 #ajanlasok .content {
   background-color: rgba(255,255,255, 0.7);
-  width: 42%;
-  height: 230px;
+  width: 50%;
+  min-height: 250px;
+  height: auto;
+  margin: 0;
   position: absolute;
-  top: 35%;
-  left: 33%;
-  align: center; 
-  padding: 8px; 
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
 }
 
 #ajanlasok .content #velemenyek {
-  width: auto;
   align: center;
   color: rgb(65, 0, 0);
   border: 3px solid;
@@ -61,15 +65,18 @@
 }
 
 .hozzaszolni {
-  position: relative;
-  top: 100%;
-  
+  width: 70%;
+  height: 30px;
+  text-align: center;
+}
+
+.hr {
+  color: #362b0d;
 }
 
 @media screen and (max-width: 800px) {
-  .b {
-    width: 80%;
-    height: 160px;
+  #ajanlasok .content {
+    width: 55%;
   }
 }
 
@@ -207,12 +214,12 @@
   height: 30px;
   display: inline;
   background-color: #d9c7c7;
-  
+
 }
 #sidenav .dropdown-container .ujelem #pipa {
   width: 160%;
   height: 100%;
   background: transparent;
   opacity: 1;
-  
+
 }
