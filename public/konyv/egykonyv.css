@@ -2,20 +2,34 @@
   float: left;
   background-color: #FFFFFF;
   height: 100%;
-  margin-top: 10px;
+  width: 49%;
+  display: block;
+}
+
+#boritokep {
+	width: 100%;
+}
+
+#adatokjobb {
+	float: right;
+	width: 49%;
 }
 
 #adatok {
-  float: left;
-  width: 25%;
+  width: 100%;
+  border-collapse: collapse;
   border: none;
-  margin-top: 10px;
-  margin-left: 10px;
+}
+
+#adatok td {
+	width: 50%;
+	border-bottom: 1px solid black;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #adatok td:nth-child(1){
 	font-weight: bold;
-  text-align: left;
 }
 
 #sorozatresz {
@@ -24,9 +38,29 @@
 }
 
 #keret{
-  margin: 0px 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#keret fieldset {
+	width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 #visszagomb {
-  float: left;
+	margin-left: 50px;
+	margin-top: 30px;
+	font-size: large;
+}
+
+#szerkesztgomb {
+	float: left;
+	margin-top: 10px;
+}
+
+#torlesgomb {
+	float: right;
+	margin-top: 10px;
 }

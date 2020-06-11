@@ -12,7 +12,7 @@ function kiiradat() {
       document.getElementById("konyvformatum").innerHTML = konyv.tipus;
       document.getElementById("konyvkiadaseve").innerHTML = konyv.kiadaseve;
       document.getElementById("konyvkiadasszama").innerHTML = konyv.kiadasszam;
-      document.getElementById("torlesgomb").innerHTML = `<button onclick="torles('${konyv._id}')">Törlés</button>`;
+      document.getElementById("torlesgomb").onclick = "torles('${konyv._id}')";
       //document.getElementById("szerkesztgomb").innerHTML = `<button onclick="">Szerkesztés</button>`;
       if(konyv.sorozatcim == ""){
         var ketsor = document.getElementsByClassName("egysoradat");
@@ -30,6 +30,24 @@ function kiiradat() {
 
 kiiradat();
 
+function kepkiir(){
+	var borito = document.getElementById("boritokep");
+	var adat = document.getElementById("adatokjobb");
+	var kep = document.getElementById("kep");
+	if(document.getElementById("boritokep").src != ""){
+		kep.style.width = "49%";
+		kep.style.display = "block";
+		adat.style.width = "49%";
+		//console.log("A kép létezik");
+	} else {
+		kep.style.display = "none";
+		adat.style.width = "100%";
+		//console.log("A kép nem létezik");
+	}
+}
+
+kepkiir();
+
 function torles(konyvid) {
   superagent
     .post("/egykonyvtorles")
@@ -38,8 +56,7 @@ function torles(konyvid) {
     .then(res => {
       alert("Sikeres törlés! :D");
      // document.getElementById("myTable").innerHTML = '';
-      window.location.hash = "/sajatkonyvtar";
-      console.log("Relokáció2")
+      window.location = "#/sajatkonyvtar";
+      //console.log("Relokáció2")
     });
 }
-
