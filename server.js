@@ -12,7 +12,7 @@ var url = process.env.DBCONNECTION;
 var sessionsecret = process.env.SESSIONSECRET;
 
 //ellenorizendo, hogy jó-e
-var client = require('socket.io').listen(443).sockets;
+var client = require('socket.io').url;
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
