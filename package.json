@@ -22,9 +22,7 @@
 	},
 	"keywords": [
 		"node",
-		"express",
-		"google",
-		"oauth"
+		"express"
 	],
   "license": "MIT"
 }
