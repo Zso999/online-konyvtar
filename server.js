@@ -11,6 +11,10 @@ var MongoClient = mongodb.MongoClient;
 var url = process.env.DBCONNECTION;
 var sessionsecret = process.env.SESSIONSECRET;
 
+//ellenorizendo, hogy jó-e
+var server = require("http").createServer();
+var client = require('socket.io')(server);
+
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
@@ -357,6 +361,65 @@ app.get('/bejegyzesadat', function(req, res) {
   });
 });
 */
+
+//connect to mongodb
+MongoClient.connect(url, function(err, db) {
+  if(err){
+    throw err;
+  }
+  console.log("Mongodb connected...");
+
+  //connect to socket.io
+  client.on('connection', function(socket) {
+    let chat = db.collection("chats");
+
+    //create function to send status
+    sendStatus = function(s) {
+      socket.emit('status', s)
+    }
+
+    //get chasts from mongo collection
+    chat.find().limit(100).sort({_id:1}).toArray(function(err, res) {
+      if(err){
+        throw err;
+      }
+
+      //emit the messages
+      socket.emit('output', res);
+    });
+    //handle input events
+    socket.on('input', function(data) {
+      let name = data.name;
+      let message = data.message;
+
+      //check for name and message
+      if(name == '' || message == ''){
+        //send error status
+        sendStatus('Kérlek add meg az üzenetet!')
+      } else {
+        //insert message
+        chat.insert({name: name, message: message}, function() {
+          client.emit('output', [data]);
+
+          //send status
+          sendStatus({
+            message: "Az üzenet el lett küldve",
+            clear: true
+          });
+        });
+      }
+    });
+
+    //handle clear
+    socket.on('clear', function(data) {
+      //remove all chats from collection
+      chat.remove({}, function() {
+        //emit cleared
+        socket.emit('cleared');
+      });
+    });
+  });
+});
 
 app.use(express.static('public'));
 app.use(express.static('blog'));
