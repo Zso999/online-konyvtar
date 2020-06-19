@@ -12,7 +12,17 @@ var url = process.env.DBCONNECTION;
 var sessionsecret = process.env.SESSIONSECRET;
 
 //ellenorizendo, hogy jó-e
-var client = require('socket.io').url;
+const io = require('socket.io');
+const ioc = require('socket.io-client');
+const customParser = require('socket.io-json-parser');
+
+let server = io(PORT, {
+  parser: customParser
+});
+
+let client = ioc('ws://localhost:' + PORT, {
+  parser: customParser
+});
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
