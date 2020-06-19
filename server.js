@@ -370,7 +370,7 @@ app.get('/bejegyzesadat', function(req, res) {
   });
 });
 */
-
+/*
 //connect to mongodb
 MongoClient.connect(url, function(err, db) {
   if(err){
@@ -429,6 +429,7 @@ MongoClient.connect(url, function(err, db) {
     });
   });
 });
+*/
 
 app.use(express.static('public'));
 app.use(express.static('blog'));
