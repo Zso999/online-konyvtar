@@ -22,8 +22,8 @@ let server = io(PORT, {
 
 let client = ioc('ws://localhost:' + PORT, {
   parser: customParser
-});*/
-
+});
+*/
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
