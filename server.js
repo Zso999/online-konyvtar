@@ -11,20 +11,9 @@ var MongoClient = mongodb.MongoClient;
 var url = process.env.DBCONNECTION;
 var sessionsecret = process.env.SESSIONSECRET;
 
-//ellenorizendo, hogy jó-e
-/*
-const io = require('socket.io');
-const ioc = require('socket.io-client');
-const customParser = require('socket.io-json-parser');
+const http = require('http').Server(app);
+const client = require('socket.io')(http); //io, socket.io-bol
 
-let server = io(PORT, {
-  parser: customParser
-});
-
-let client = ioc('ws://localhost:' + PORT, {
-  parser: customParser
-});
-*/
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
@@ -371,7 +360,12 @@ app.get('/bejegyzesadat', function(req, res) {
   });
 });
 */
-/*
+
+
+
+//*
+io.on('connection', (socket) => {
+
 //connect to mongodb
 MongoClient.connect(url, function(err, db) {
   if(err){
@@ -430,7 +424,8 @@ MongoClient.connect(url, function(err, db) {
     });
   });
 });
-*/
+  })
+//*/
 
 app.use(express.static('public'));
 app.use(express.static('blog'));
@@ -439,6 +434,10 @@ app.use(express.static('konyv'));
 app.use(express.static('kolcson'));
 
 
-var listener = app.listen(process.env.PORT, function() {
+/*var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
-});
+});*/
+const server = http.listen(process.env.PORT || 3000, () => {
+  console.log('Your app is listening on port ' + listener.address().port);
+  console.log('Started');
+});```
