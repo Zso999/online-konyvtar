@@ -424,7 +424,7 @@ MongoClient.connect(url, function(err, db) {
     });
   });
 });
-  })
+  });
 //*/
 
 app.use(express.static('public'));
