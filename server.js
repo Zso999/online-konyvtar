@@ -364,10 +364,6 @@ app.get('/bejegyzesadat', function(req, res) {
 
 
 //*
-
-io.on('connection', function(socket) {
-console.log('user connected....');
-});
   //connect to mongodb
 MongoClient.connect(url, function(err, db) {
   if(err){
@@ -438,4 +434,8 @@ app.use(express.static('kolcson'));
 
 var listener = http.listen(process.env.PORT || 3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
+});
+
+io.on('connection', function(socket) {
+console.log('user connected....');
 });
