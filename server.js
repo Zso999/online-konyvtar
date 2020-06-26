@@ -363,8 +363,8 @@ app.get('/bejegyzesadat', function(req, res) {
 
 
 
-/*
-io.on('connection', (socket) => {
+//*
+client.on('connection', (socket) => {
 
 //connect to mongodb
 MongoClient.connect(url, function(err, db) {
@@ -425,7 +425,7 @@ MongoClient.connect(url, function(err, db) {
   });
 });
   });
-*/
+//*/
 
 app.use(express.static('public'));
 app.use(express.static('blog'));
@@ -437,8 +437,3 @@ app.use(express.static('kolcson'));
 var listener = http.listen(process.env.PORT || 3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
-/*const server = http.listen(process.env.PORT || 3000, () => {
-  console.log('Your app is listening on port ' + listener.address().port);
-  console.log('Started');
-});```
-*/
