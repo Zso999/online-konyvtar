@@ -365,7 +365,7 @@ app.get('/bejegyzesadat', function(req, res) {
 
 //*
 
-io.on('connection', (socket)=>{
+io.on('connection', function(socket) {
 console.log('user connected....');
 });
   //connect to mongodb
