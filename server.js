@@ -1,5 +1,5 @@
 // hello world
-//console.log('hello');
+console.log('hello');
 
 var express = require('express');
 var app = express();
