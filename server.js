@@ -374,7 +374,8 @@ MongoClient.connect(url, function(err, db) {
   //connect to socket.io
   client.on('connection', function(socket) {
     let chat = db.collection("chats");
-
+    console.log("socket.io connected....");
+    
     //create function to send status
     sendStatus = function(s) {
       socket.emit('status', s)
