@@ -1,5 +1,5 @@
 // hello world
-console.log('hello');
+console.log('server started');
 
 var express = require('express');
 var app = express();
@@ -364,7 +364,6 @@ app.get('/bejegyzesadat', function(req, res) {
 
 
 //*
-  console.log("working... but not connected");
   //connect to mongodb
 MongoClient.connect(url, function(err, db) {
   if(err){
