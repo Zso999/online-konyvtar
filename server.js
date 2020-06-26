@@ -372,7 +372,7 @@ MongoClient.connect(url, function(err, db) {
   console.log("Mongodb connected...");
 
   //connect to socket.io
-  client.on('connection', function(socket) {
+  client.on('connection', (socket) => {
     let chat = db.collection("chats");
     console.log("socket.io connected....");
     
