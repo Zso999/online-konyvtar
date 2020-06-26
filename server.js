@@ -434,10 +434,11 @@ app.use(express.static('konyv'));
 app.use(express.static('kolcson'));
 
 
-/*var listener = app.listen(process.env.PORT, function() {
+var listener = http.listen(process.env.PORT || 3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
-});*/
-const server = http.listen(process.env.PORT || 3000, () => {
+});
+/*const server = http.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port);
   console.log('Started');
 });```
+*/
