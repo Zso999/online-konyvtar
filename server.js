@@ -365,8 +365,8 @@ app.get('/bejegyzesadat', function(req, res) {
 
 //*
 client.on('connection', (socket) => {
-
-//connect to mongodb
+  console.log("working... but not connected");
+  //connect to mongodb
 MongoClient.connect(url, function(err, db) {
   if(err){
     throw err;
@@ -424,7 +424,7 @@ MongoClient.connect(url, function(err, db) {
     });
   });
 });
-  });
+});
 //*/
 
 app.use(express.static('public'));
