@@ -12,7 +12,7 @@ var url = process.env.DBCONNECTION;
 var sessionsecret = process.env.SESSIONSECRET;
 
 const http = require('http').Server(app);
-const client = require('socket.io')(http); //io, socket.io-bol
+const io = require('socket.io')(http); //io, socket.io-bol
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -372,7 +372,7 @@ MongoClient.connect(url, function(err, db) {
   console.log("Mongodb connected...");
 
   //connect to socket.io
-  client.on('connection', function(socket) {
+  io.on('connection', (socket) => {
     let chat = db.collection("chats");
     console.log("socket.io connected....");
     
@@ -434,4 +434,8 @@ app.use(express.static('kolcson'));
 
 var listener = http.listen(process.env.PORT || 3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
+});
+
+io.on('connection', function(socket) {
+console.log('user connected....');
 });
