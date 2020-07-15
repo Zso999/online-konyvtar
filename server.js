@@ -404,7 +404,7 @@ app.get('/bejegyzesadat', function(req, res) {
         sendStatus('Kérlek add meg az üzenetet!')
       } else {
         //insert message
-        //chat.insert({name: name, message: message}, function() {
+        /*chat.insert({name: name, message: message}, function() {
           client.emit('output', [data]);
 
           //send status
@@ -412,7 +412,7 @@ app.get('/bejegyzesadat', function(req, res) {
             message: "Az üzenet el lett küldve",
             clear: true
           });
-        });
+        });*/
       }
     });
 
@@ -422,7 +422,7 @@ app.get('/bejegyzesadat', function(req, res) {
       //chat.remove({}, function() {
         //emit cleared
         socket.emit('cleared');
-      });
+      //});
     });
   });
 //});
