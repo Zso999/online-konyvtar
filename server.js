@@ -365,22 +365,22 @@ app.get('/bejegyzesadat', function(req, res) {
 
 //*
   //connect to mongodb
-MongoClient.connect(url, function(err, db) {
-  if(err){
-    throw err;
-  }
-  console.log("Mongodb connected...");
+//MongoClient.connect(url, function(err, db) {
+  //if(err){
+    //throw err;
+  //}
+  //console.log("Mongodb connected...");
 
   //connect to socket.io
   io.on('connection', (socket) => {
-    let chat = db.collection("chats");
+    //let chat = db.collection("chats");
     console.log("socket.io connected....");
     
     //create function to send status
     sendStatus = function(s) {
       socket.emit('status', s)
     }
-
+/*
     //get chasts from mongo collection
     chat.find().limit(100).sort({_id:1}).toArray(function(err, res) {
       if(err){
@@ -390,6 +390,9 @@ MongoClient.connect(url, function(err, db) {
       //emit the messages
       socket.emit('output', res);
     });
+*/
+    socket.emit('output', 'Hello World');
+    
     //handle input events
     socket.on('input', function(data) {
       let name = data.name;
@@ -401,7 +404,7 @@ MongoClient.connect(url, function(err, db) {
         sendStatus('Kérlek add meg az üzenetet!')
       } else {
         //insert message
-        chat.insert({name: name, message: message}, function() {
+        //chat.insert({name: name, message: message}, function() {
           client.emit('output', [data]);
 
           //send status
@@ -416,13 +419,13 @@ MongoClient.connect(url, function(err, db) {
     //handle clear
     socket.on('clear', function(data) {
       //remove all chats from collection
-      chat.remove({}, function() {
+      //chat.remove({}, function() {
         //emit cleared
         socket.emit('cleared');
       });
     });
   });
-});
+//});
 //*/
 
 app.use(express.static('public'));
