@@ -363,7 +363,7 @@ app.get('/bejegyzesadat', function(req, res) {
 
 
 
-//*
+/*
   //connect to mongodb
 //MongoClient.connect(url, function(err, db) {
   //if(err){
@@ -380,7 +380,7 @@ app.get('/bejegyzesadat', function(req, res) {
     sendStatus = function(s) {
       socket.emit('status', s)
     }
-/*
+
     //get chasts from mongo collection
     chat.find().limit(100).sort({_id:1}).toArray(function(err, res) {
       if(err){
@@ -390,7 +390,7 @@ app.get('/bejegyzesadat', function(req, res) {
       //emit the messages
       socket.emit('output', res);
     });
-*/
+
     socket.emit('output', 'Hello World');
     
     //handle input events
@@ -412,7 +412,7 @@ app.get('/bejegyzesadat', function(req, res) {
             message: "Az üzenet el lett küldve",
             clear: true
           });
-        });*/
+        });
       }
     });
 
@@ -426,7 +426,7 @@ app.get('/bejegyzesadat', function(req, res) {
     });
   });
 //});
-//*/
+*/
 
 app.use(express.static('public'));
 app.use(express.static('blog'));
